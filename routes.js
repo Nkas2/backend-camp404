@@ -19,7 +19,7 @@ akses.route('/update/:id').put((req,res) => {
       .catch((error) => res.status(400).json(error.message));
 });
 
-akses.route('/add').post((res, req) => {
+akses.route('/add').post((req, res) => {
    BukuModel.create(req.body)
       .then((createdBook) => res.status(200).json(createdBook))
       .catch((error) => res.status(400).json(error.message));
